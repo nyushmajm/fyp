@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "804467429040",
+    "project_id": "freelance-clone-app-8636e",
+    "storage_bucket": "freelance-clone-app-8636e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:804467429040:android:9b07ac247303bf9c17f575",
+        "android_client_info": {
+          "package_name": "nyushma.freelance_clone_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "804467429040-0tgef18sdvjictja2dg9a5igl4aug22p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXMXeq-fj3TEaZovKPoxw_5y7BHOnCpsQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "804467429040-0tgef18sdvjictja2dg9a5igl4aug22p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
