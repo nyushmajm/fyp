@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:freelance_clone_app/LoginPage/login_screen.dart';
+
+import 'package:freelance_clone_app/user_state.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,11 +19,12 @@ class MyApp extends StatelessWidget {
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const MaterialApp(
+              debugShowCheckedModeBanner: false,
               home: Scaffold(
                 backgroundColor: Colors.blue,
                 body: Center(
                   child: Text(
-                    'Freelance Clone App is being initialized',
+                    'Freelance App is being initialized',
                     style: TextStyle(
                         color: Colors.cyan,
                         fontSize: 40,
@@ -52,7 +54,7 @@ class MyApp extends StatelessWidget {
               scaffoldBackgroundColor: Colors.white,
               primarySwatch: Colors.blue,
             ),
-            home: Login(),
+            home: UserState(),
           );
         });
   }
