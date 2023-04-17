@@ -1,10 +1,9 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:freelance_clone_app/ForgetPassword/forget_password_screen.dart';
 import 'package:freelance_clone_app/Services/global_methods.dart';
-import 'package:freelance_clone_app/Services/global_variables.dart';
+
 import 'package:freelance_clone_app/SignupPage/signup_screen.dart';
 
 class Login extends StatefulWidget {
@@ -87,31 +86,19 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
     return Scaffold(
       body: Stack(
         children: [
-          // CachedNetworkImage(
-          //   imageUrl: loginUrlImage,
-          //   placeholder: (context, url) => Image.asset(
-          //     'assets/images/login.jpg',
-          //     fit: BoxFit.fill,
-          //   ),
-          Image.asset(
-            'assets/images/wallpaper.jpg',
-            //     errorWidget: (context, url, error) => const Icon(Icons.error),
-            width: double.infinity,
-            height: double.infinity,
-            fit: BoxFit.cover,
-            alignment: FractionalOffset(_animation.value, 0),
-          ),
           Container(
             color: Colors.black54,
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 80),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 60),
               child: ListView(
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(left: 80, right: 80),
-                    child: Image.asset('assets/images/login.png'),
+                    child: Image.network(
+                        'https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-135.jpg?w=740&t=st=1681640791~exp=1681641391~hmac=49dce83c94d1041731dbc59574e0cf8bd9e74b8c0a35049acb9bfcdfd7c07cca'),
+                    // child: Image.asset('/login.png'),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
                   Form(

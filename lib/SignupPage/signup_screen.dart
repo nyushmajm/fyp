@@ -6,9 +6,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:flutter/material.dart';
 import 'package:freelance_clone_app/Services/global_methods.dart';
 import 'package:freelance_clone_app/Services/global_variables.dart';
 import 'package:image_cropper/image_cropper.dart';
@@ -232,10 +229,10 @@ class _SignUpState extends State<SignUp> with TickerProviderStateMixin {
         children: [
           CachedNetworkImage(
             imageUrl: signUpUrlImage,
-            placeholder: (context, url) => Image.asset(
-              'assets/images/wallpaper.jpg',
-              fit: BoxFit.fill,
-            ),
+            // placeholder: (context, url) => Image.asset(
+            //   'assets/images/wallpaper.jpg',
+            //   fit: BoxFit.fill,
+            // ),
             errorWidget: (context, url, error) => Icon(Icons.error),
             width: double.infinity,
             height: double.infinity,

@@ -5,6 +5,7 @@ import 'package:freelance_clone_app/user_state.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
+
   runApp(MyApp());
 }
 
@@ -49,6 +50,7 @@ class MyApp extends StatelessWidget {
             );
           }
           return MaterialApp(
+            debugShowCheckedModeBanner: false,
             title: 'FreelanceFinder',
             theme: ThemeData(
               scaffoldBackgroundColor: Colors.white,

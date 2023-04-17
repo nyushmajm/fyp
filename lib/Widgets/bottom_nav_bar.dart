@@ -58,6 +58,7 @@ class BottomNavigationBarForApp extends StatelessWidget {
               ),
               TextButton(
                 onPressed: () {
+                  _auth.signOut();
                   Navigator.canPop(context) ? Navigator.pop(context) : null;
                   Navigator.pushReplacement(
                       context, MaterialPageRoute(builder: (_) => UserState()));
@@ -75,36 +76,36 @@ class BottomNavigationBarForApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CurvedNavigationBar(
-      color: Color.fromARGB(255, 182, 116, 182),
-      backgroundColor: Colors.blueAccent,
-      buttonBackgroundColor: Colors.deepOrange.shade300,
+      color: Colors.grey.shade900,
+      backgroundColor: Colors.grey,
+      buttonBackgroundColor: Colors.black,
       height: 50,
       index: indexNum,
       items: const [
         Icon(
           Icons.list,
           size: 19,
-          color: Colors.black,
+          color: Colors.white,
         ),
         Icon(
           Icons.search,
           size: 19,
-          color: Colors.black,
+          color: Colors.white,
         ),
         Icon(
           Icons.add,
           size: 19,
-          color: Colors.black,
+          color: Colors.white,
         ),
         Icon(
           Icons.person_pin,
           size: 19,
-          color: Colors.black,
+          color: Colors.white,
         ),
         Icon(
           Icons.exit_to_app,
           size: 19,
-          color: Colors.black,
+          color: Colors.white,
         ),
       ],
       animationDuration: const Duration(
@@ -122,8 +123,15 @@ class BottomNavigationBarForApp extends StatelessWidget {
           Navigator.pushReplacement(
               context, MaterialPageRoute(builder: (_) => UploadJobNow()));
         } else if (index == 3) {
+          final FirebaseAuth _auth = FirebaseAuth.instance;
+          final User? user = _auth.currentUser;
+          final String uid = user!.uid;
           Navigator.pushReplacement(
-              context, MaterialPageRoute(builder: (_) => ProfileScreen()));
+              context,
+              MaterialPageRoute(
+                  builder: (_) => ProfileScreen(
+                        userID: uid,
+                      )));
         } else if (index == 4) {
           _logout(context);
         }

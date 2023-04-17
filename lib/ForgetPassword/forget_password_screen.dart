@@ -1,7 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -103,7 +101,7 @@ class _ForgetPasswordState extends State<ForgetPassword>
                 const SizedBox(
                   height: 17,
                 ),
-                Text(
+                const Text(
                   'Email Address',
                   style: TextStyle(
                     color: Color.fromARGB(255, 34, 18, 1),
@@ -136,7 +134,7 @@ class _ForgetPasswordState extends State<ForgetPassword>
 
                 // Reset Password
 
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
 
